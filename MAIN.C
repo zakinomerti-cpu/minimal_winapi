@@ -1,11 +1,11 @@
-#define DWORD     unsigned int
-#define LPCSTR    const char*
-#define HWND      void*
-#define HMENU     void*
-#define HINSTANCE void*
-#define LPVOID    void*
-#define UINT      unsigned int
-#define BYTE      unsigned char
+#define DWORD 		unsigned int
+#define LPCSTR 		const char*
+#define HWND 		void*
+#define HMENU 		void*
+#define HINSTANCE 	void*
+#define LPVOID 		void*
+#define UINT 		unsigned int
+#define BYTE 		unsigned char
 
 #define WINAPI __stdcall
 
@@ -17,11 +17,11 @@ __declspec(dllimport) void* WINAPI CreateWindowExA
 	int,int,int,int,
 	HWND,HMENU,HINSTANCE,LPVOID
 );
-__declspec(dllimport) int GetMessageA(void*,HWND,UINT,UINT);
-__declspec(dllimport) WINAPI TranslateMessage(void*);
-__declspec(dllimport) WINAPI DispatchMessageA(void*);
-__declspec(dllimport) WINAPI ExitProcess(UINT);
-__declspec(dllimport) int WINAPI IsWindow(HWND);
+__declspec(dllimport) int	WINAPI 	GetMessageA(void*,HWND,UINT,UINT);
+__declspec(dllimport) void	WINAPI 	TranslateMessage(void*);
+__declspec(dllimport) void	WINAPI	DispatchMessageA(void*);
+__declspec(dllimport) void	WINAPI 	ExitProcess(UINT);
+__declspec(dllimport) int	WINAPI 	IsWindow(HWND);
 
 void entry(void) {
 	BYTE msg[28];
@@ -46,6 +46,7 @@ void entry(void) {
 			break;
 		}
 	}
+
 	ExitProcess(0);
 
 }
